@@ -1,7 +1,7 @@
 {
-  "name": "@starter-pack/cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "starter-pack-cli",
+  "version": "0.1.2",
+  "description": "A CLI tool for quickly setting up new projects with your favorite tools",
   "main": "/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bin": "./index.js",
-  "dependencies": {},
+  "dependencies": {
+    "arg": "^4.1.3",
+    "chalk": "^4.1.0",
+    "figlet": "^1.5.0",
+    "git-clone": "^0.1.0",
+    "inquirer": "^7.3.3"
+  },
   "publishConfig": {
     "access": "public"
   }
