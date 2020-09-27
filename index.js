@@ -30,17 +30,21 @@ inquirer
   .prompt(promptQuestions)
   .then((answer) => {
     const cleanAppName = answer.name.replace(/\s+/g, "-").toLowerCase();
-    console.info("Response:", answer);
     switch (answer.pack) {
       case "React":
+        console.log(chalk.blue("Creating Pack..."));
         clone("https://github.com/sunil-sandhu/react-starter-pack", "./" + cleanAppName);
         break;
       case "React + Express":
+        console.log(chalk.blue("Creating Pack..."));
         clone("https://github.com/sunil-sandhu/react-express-starter-pack", "./" + cleanAppName);
         break;
       default:
         console.log("You didn't pick anything...");
     }
+  })
+  .then(() => {
+    console.log(chalk.green("Your Starter Pack has been created. Have fun building stuff!"));
   })
   .catch((error) => {
     if (error.isTtyError) {
