@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const inquirer = require("inquirer");
 const figlet = require("figlet");
 const chalk = require("chalk");
